@@ -25,28 +25,24 @@
 ---
 
 ## 📸 Screenshots
+<img width="1918" height="912" alt="image" src="https://github.com/user-attachments/assets/88f00499-57ba-4485-916e-000e582f79be" />
+<img width="1919" height="907" alt="image" src="https://github.com/user-attachments/assets/a51ed86b-ff00-42f0-a6ab-7db6d7a47a96" />
+<img width="1919" height="915" alt="image" src="https://github.com/user-attachments/assets/7d0c2b76-1f37-4c4a-b0ff-a0c272a1a5aa" />
+<img width="1919" height="914" alt="image" src="https://github.com/user-attachments/assets/c3673d47-4483-4674-80a3-e8490deb932f" />
 
-| Predict Page | SHAP Explainer | What-If Analyzer |
-|:---:|:---:|:---:|
-| *Price prediction with 18 features* | *AI explains every prediction* | *Live sliders re-predict instantly* |
-
-| Image Analysis | PDF Report | AI Chatbot |
-|:---:|:---:|:---:|
-| *Gemini Vision scores property condition* | *2-page branded valuation report* | *Context-aware real estate advisor* |
 
 ---
 
 ## ✦ What Makes This Different
 
-Most ML projects stop at training a model and showing accuracy. **ProphetAI goes 6 layers deeper:**
+Most ML projects stop at training a model and showing accuracy. **ProphetAI goes 5 layers deeper:**
 
 ```
 Layer 1 — XGBoost Model          R²=0.984, trained on 12K Indian housing records
 Layer 2 — SHAP Explainability    Every prediction explained with feature attribution
-Layer 3 — What-If Analyzer       Live sliders, instant re-prediction, price sensitivity
-Layer 4 — Vision AI              Gemini Vision scores property photos, adjusts price
-Layer 5 — PDF Report Export      Branded 2-page valuation report with EMI scenarios
-Layer 6 — AI Chatbot             Context-aware Gemini advisor knows your exact property
+Layer 3 — Vision AI              Gemini Vision scores property photos, adjusts price
+Layer 4 — PDF Report Export      Branded 2-page valuation report with EMI scenarios
+Layer 5 — AI Chatbot             Context-aware Gemini advisor knows your exact property
 ```
 
 ---
@@ -66,11 +62,6 @@ Layer 6 — AI Chatbot             Context-aware Gemini advisor knows your exact
 - Answers the question *"Why did the model predict this price?"*
 - Top 10 contributing features ranked by impact in ₹
 
-### ⚡ What-If Analyzer
-- Live sliders for all 10 continuous features
-- **Debounced real-time re-prediction** — price updates 350ms after slider move
-- Summary of all changes with before/after comparison
-- Total price impact shown in ₹ and percentage
 
 ### 📸 Vision AI Image Analysis
 - Upload any property photo → **Gemini Vision** analyses condition
@@ -135,101 +126,7 @@ Layer 6 — AI Chatbot             Context-aware Gemini advisor knows your exact
 | **Vercel** | Frontend hosting — CDN-distributed React build |
 | **GitHub** | Version control and CI/CD trigger |
 
----
 
-## 📁 Project Structure
-
-```
-house-price-prediction/
-│
-├── house-ml-backend/
-│   ├── app.py                  # FastAPI app — 7 endpoints
-│   ├── model.pkl               # Trained XGBoost model
-│   ├── le_city.pkl             # City label encoder
-│   ├── le_furnishing.pkl       # Furnishing label encoder
-│   ├── le_locality.pkl         # Locality label encoder
-│   ├── metadata.json           # City stats, model metrics, feature names
-│   ├── requirements.txt        # Python dependencies
-│   └── train.py                # Model training script
-│
-└── house-frontend/
-    ├── public/
-    └── src/
-        ├── components/
-        │   ├── ChatBot.jsx         # Floating AI advisor widget
-        │   ├── EMICalculator.jsx   # EMI breakdown calculator
-        │   ├── PDFReport.jsx       # PDF download button
-        │   ├── PriceCard.jsx       # Prediction result hero card
-        │   ├── ShapExplainer.jsx   # SHAP waterfall chart
-        │   ├── Sidebar.jsx         # Navigation sidebar
-        │   ├── TrendChart.jsx      # Price trend visualization
-        │   └── WhatIfAnalyzer.jsx  # Live slider re-predictor
-        ├── pages/
-        │   ├── About.jsx           # Developer profile page
-        │   ├── Compare.jsx         # City comparison page
-        │   ├── Dashboard.jsx       # Analytics dashboard
-        │   ├── ImageAnalysis.jsx   # Vision AI upload page
-        │   └── Predict.jsx         # Main prediction page
-        ├── utils/
-        │   └── api.js              # API utility functions
-        ├── App.jsx                 # Root component + shared state
-        └── index.css               # Global design system
-```
-
----
-
-## ⚙️ API Endpoints
-
-| Method | Endpoint | Description |
-|---|---|---|
-| `GET` | `/` | Health check |
-| `GET` | `/metadata` | Cities, features, model stats |
-| `POST` | `/predict` | Price prediction with luxury multiplier |
-| `POST` | `/explain` | SHAP feature attribution |
-| `POST` | `/report` | PDF report generation |
-| `POST` | `/chat` | Gemini AI chatbot |
-| `POST` | `/estimate-image` | Vision AI image analysis |
-| `GET` | `/compare` | Multi-city price comparison |
-
----
-
-## 🏃 Run Locally
-
-### Prerequisites
-- Python 3.9+
-- Node.js 16+
-- Gemini API key from [Google AI Studio](https://aistudio.google.com/apikey)
-
-### Backend Setup
-```bash
-# Clone the repo
-git clone https://github.com/GAURAVVVVVVVVVVVVV/house-price-prediction.git
-cd house-price-prediction/house-ml-backend
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Set your Gemini API key
-# Windows PowerShell:
-[System.Environment]::SetEnvironmentVariable("GEMINI_API_KEY","your-key-here","User")
-
-# Start the server
-uvicorn app:app --reload
-# API running at http://localhost:8000
-# Docs at http://localhost:8000/docs
-```
-
-### Frontend Setup
-```bash
-cd ../house-frontend
-
-# Install dependencies
-npm install
-
-# Start the dev server
-npm start
-# App running at http://localhost:3000
-```
 
 ---
 
@@ -278,26 +175,8 @@ if super_area > 3000 or bhk >= 4 or (locality == "Premium" and area > 2000):
 | Frontend | Vercel | `https://house-price-prediction-nql7ipndg.vercel.app` |
 | Backend | Render | `https://prophetai-backend.onrender.com` |
 
-> ⚠️ **Note:** Render free tier spins down after 15 minutes of inactivity.  
-> First request after idle may take 30–50 seconds to wake up.
-
 ---
 
-## 👨‍💻 Developer
-
-<div align="center">
-
-**Gaurav Mehta**  
-*Developer & ML Engineer*
-
-[![GitHub](https://img.shields.io/badge/GitHub-GAURAVVVVVVVVVVVVV-181717?style=for-the-badge&logo=github)](https://github.com/GAURAVVVVVVVVVVVVV)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Gaurav_Mehta-0a66c2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/gaurav-mehta-324431318/)
-[![Instagram](https://img.shields.io/badge/Instagram-@gauravvmehtaaa-e1306c?style=for-the-badge&logo=instagram)](https://www.instagram.com/gauravvmehtaaa)
-
-*Every line of code, every model weight, every UI component —  
-designed, built and shipped by one developer.*
-
-</div>
 
 ---
 
