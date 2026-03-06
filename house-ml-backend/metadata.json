@@ -1,0 +1,109 @@
+{
+  "features": [
+    "BHK",
+    "Bathrooms",
+    "Super_Area_sqft",
+    "Carpet_Area_sqft",
+    "Floor_No",
+    "Total_Floors",
+    "Property_Age_years",
+    "Parking",
+    "Lift",
+    "Gated_Society",
+    "City_enc",
+    "Locality_enc",
+    "Distance_to_Metro_km",
+    "Distance_to_CityCenter_km",
+    "Nearby_School_km",
+    "Nearby_Hospital_km",
+    "Crime_Rate_Index",
+    "city_median",
+    "Area_Efficiency",
+    "Floor_Ratio",
+    "Rooms_per_100sqft",
+    "Proximity_Score",
+    "Services_Score",
+    "Safety_Score",
+    "Is_Premium",
+    "Is_Budget",
+    "Is_New_Property",
+    "Furnishing_enc"
+  ],
+  "cities": [
+    "Bangalore",
+    "Hyderabad",
+    "Mumbai",
+    "Nagpur",
+    "Pune"
+  ],
+  "furnishings": [
+    "Fully-Furnished",
+    "Semi-Furnished",
+    "Unfurnished"
+  ],
+  "locality_tiers": [
+    "Budget",
+    "Mid",
+    "Premium"
+  ],
+  "model_stats": {
+    "r2": 0.9841,
+    "mae": 539641.0,
+    "rmse": 731632.0,
+    "mape": 5.46,
+    "training_samples": 9408,
+    "test_samples": 2352
+  },
+  "feature_importances": {
+    "BHK": 0.5431,
+    "city_median": 0.1173,
+    "Super_Area_sqft": 0.0761,
+    "Is_Budget": 0.0539,
+    "Carpet_Area_sqft": 0.0521,
+    "City_enc": 0.052,
+    "Locality_enc": 0.0367,
+    "Is_Premium": 0.0257,
+    "Proximity_Score": 0.0074,
+    "Distance_to_Metro_km": 0.0057,
+    "Bathrooms": 0.0034,
+    "Distance_to_CityCenter_km": 0.0031,
+    "Total_Floors": 0.0026,
+    "Crime_Rate_Index": 0.0026,
+    "Parking": 0.0026,
+    "Floor_No": 0.0024,
+    "Safety_Score": 0.0024,
+    "Furnishing_enc": 0.0017,
+    "Gated_Society": 0.0015,
+    "Area_Efficiency": 0.0011,
+    "Services_Score": 0.001,
+    "Property_Age_years": 0.001,
+    "Rooms_per_100sqft": 0.001,
+    "Nearby_School_km": 0.0008,
+    "Nearby_Hospital_km": 0.0008,
+    "Lift": 0.0008,
+    "Floor_Ratio": 0.0007,
+    "Is_New_Property": 0.0007
+  },
+  "city_stats": {
+    "Bangalore": {
+      "city_median": 8764396.0,
+      "city_mean": 9808014.307404326
+    },
+    "Hyderabad": {
+      "city_median": 6919126.0,
+      "city_mean": 7720029.232635586
+    },
+    "Mumbai": {
+      "city_median": 13922887.0,
+      "city_mean": 15218680.891726252
+    },
+    "Nagpur": {
+      "city_median": 5088344.5,
+      "city_mean": 5707047.252421307
+    },
+    "Pune": {
+      "city_median": 7904373.0,
+      "city_mean": 8832814.695309568
+    }
+  }
+}
