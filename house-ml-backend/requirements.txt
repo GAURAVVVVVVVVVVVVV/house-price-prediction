@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+joblib
+numpy
+pandas
+scikit-learn
+xgboost
+shap
+reportlab
+google-generativeai
+python-multipart
+python-dotenv
+httpx
