@@ -10,7 +10,8 @@ export default function PDFReport({ formData, result }) {
     setLoading(true); setDone(false); setError("");
 
     try {
-      const res = await fetch("http://localhost:8000/report", {
+      const API = process.env.REACT_APP_API_URL || "http://localhost:8000";
+      const res = await fetch(`${API}/report`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

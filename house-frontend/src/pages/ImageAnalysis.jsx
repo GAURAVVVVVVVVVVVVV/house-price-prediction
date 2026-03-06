@@ -106,7 +106,8 @@ export default function ImageAnalysis({ basePrediction }) {
     try {
       const formData = new FormData();
       formData.append("file", image.file);
-      const res = await fetch("http://localhost:8000/estimate-image", {
+      const API = process.env.REACT_APP_API_URL || "http://localhost:8000";
+      const res = await fetch(`${API}/estimate-image`, {
         method:"POST",
         body: formData,
       });
