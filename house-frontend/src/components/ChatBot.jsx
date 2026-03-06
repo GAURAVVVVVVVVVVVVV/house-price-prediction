@@ -89,6 +89,7 @@ export default function ChatBot({ propertyCtx, result }) {
         : `Hi! I'm your ProphetAI real estate advisor.\n\nPredict a property price first and I'll give you **context-aware advice** about that specific property. Or just ask me anything about Indian real estate!`;
       setMessages([{ role:"assistant", content: greeting, greeting: true }]);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
   const sendMessage = async (text) => {

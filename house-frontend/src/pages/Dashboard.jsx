@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
-  ResponsiveContainer, Cell, RadarChart, Radar,
-  PolarGrid, PolarAngleAxis, PolarRadiusAxis
+  ResponsiveContainer, Cell,
 } from "recharts";
 import { getMetadata } from "../utils/api";
 

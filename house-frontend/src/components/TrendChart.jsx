@@ -1,6 +1,6 @@
 import {
   AreaChart, Area, XAxis, YAxis, CartesianGrid,
-  Tooltip, ResponsiveContainer, ReferenceLine, ReferenceDot
+  Tooltip, ResponsiveContainer, ReferenceLine,
 } from "recharts";
 
 function buildTrend(price) {
